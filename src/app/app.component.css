@@ -7,3 +7,6 @@
     color: #000;
   }
   
+#appTitle{
+  text-shadow: 3px 3px 3px grey;
+}
