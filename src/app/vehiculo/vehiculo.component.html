@@ -1,14 +1,18 @@
 <tbody>
   <div class="container-fluid">
     <div class="col-6">
-      <table class="table">
+      <table class="table" id="tabla-vehiculos">
         <thead>
           <tr>
-            <th class="h4">Marca</th>
-            <th class="h4">Línea</th>
-            <th class="h4">Modelo</th>
+            <th class="h4" id="id">#</th>
+            <th class="h4" id="marca">Marca</th>
+            <th class="h4" id="linea">Línea</th>
+            <th class="h4" id="modelo">Modelo</th>
           </tr>
           <tr *ngFor="let vehiculo of vehiculos">
+            <td>
+              <dd>{{vehiculo.id}}</dd>
+            </td>
             <td>
               <dd>{{vehiculo.marca}}</dd>
             </td>
@@ -26,3 +30,6 @@
     </div>
   </div>
 </tbody>
+<ul>Total Renault: </ul>
+<ul>Total Chevrolet: </ul>
+<ul>Total Nissan: </ul>

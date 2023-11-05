@@ -1,0 +1,7 @@
+.category_table tr:first-child td{
+    text-align: left;
+}
+
+#tabla-vehiculos{
+    text-align: left;
+}
