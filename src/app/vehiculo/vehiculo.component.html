@@ -2,34 +2,34 @@
   <div class="container-fluid">
     <div class="col-6">
       <table class="table" id="tabla-vehiculos">
-        <thead>
+        <thead class="table-dark">
           <tr>
-            <th class="h4" id="id">#</th>
-            <th class="h4" id="marca">Marca</th>
-            <th class="h4" id="linea">Línea</th>
-            <th class="h4" id="modelo">Modelo</th>
+            <th id="id">#</th>
+            <th id="marca">Marca</th>
+            <th id="linea">Línea</th>
+            <th id="modelo">Modelo</th>
           </tr>
-          <tr *ngFor="let vehiculo of vehiculos">
-            <td>
-              <dd>{{vehiculo.id}}</dd>
-            </td>
-            <td>
-              <dd>{{vehiculo.marca}}</dd>
-            </td>
-            <td>
-              <dd>{{vehiculo.linea}}</dd>
-            </td>
-            <td>
-              <dd>{{vehiculo.modelo}}</dd>
-            </td>
-        </tr>
         </thead>
         <tbody>
+          <tr *ngFor="let vehiculo of vehiculos">
+            <td style="min-width: 50px;">
+              <dd>{{vehiculo.id}}</dd>
+            </td>
+            <td style="min-width: 150px;">
+              <dd>{{vehiculo.marca}}</dd>
+            </td>
+            <td style="min-width: 150px;">
+              <dd>{{vehiculo.linea}}</dd>
+            </td>
+            <td style="min-width: 300px;">
+              <dd>{{vehiculo.modelo}}</dd>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
   </div>
 </tbody>
-<ul>Total Renault: </ul>
-<ul>Total Chevrolet: </ul>
-<ul>Total Nissan: </ul>
+<ul>Total Renault: {{getTotalVehiculosMarca("Renault")}} </ul>
+<ul>Total Chevrolet: {{getTotalVehiculosMarca("Chevrolet")}} </ul>
+<ul>Total Nissan: {{getTotalVehiculosMarca("Nissan")}} </ul>

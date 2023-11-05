@@ -22,4 +22,8 @@ export class VehiculoComponent implements OnInit {
     this.getVehiculos();
   }
 
+  getTotalVehiculosMarca(marca: string): number {
+      return this.vehiculos.filter(i => i.marca == marca).length;
+  }
+
 }
